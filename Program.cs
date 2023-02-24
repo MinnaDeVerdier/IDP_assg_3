@@ -40,6 +40,11 @@ namespace IDP_assg_3
             Grundämne.Print(guld);
 
             Grundämne[] grundämnen = { syre, järn, guld, new Grundämne("väte", 1, false, 13.99, 20.271), new Grundämne("brom", 35, false, 265.8, 332.0), new Grundämne("kvicksilver", 80, true, 234.3210, 629.88) };
+
+    //skriver ut grundämnen med namn
+            WriteLine("Alla listade grundämnen:");
+            foreach (Grundämne g in grundämnen) { WriteLine(g.namn); }
+
         }
     }
 }
