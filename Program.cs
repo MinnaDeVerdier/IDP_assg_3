@@ -5,12 +5,12 @@ namespace IDP_assg_3
 {
     internal class Program
     {
-        public class Element
+        public class Grundämne
         {
             public string namn = "";
             public double Z = 0, smältpunkt = 0, kokpunkt = 0;
             public bool typ;
-            public Element(string namn, double atomnummer, bool isMetall, double smältpunkt, double kokpunkt) 
+            public Grundämne(string namn, double atomnummer, bool isMetall, double smältpunkt, double kokpunkt) 
             { 
                 this.namn = namn;
                 this.Z = atomnummer;
@@ -18,12 +18,26 @@ namespace IDP_assg_3
                 this.smältpunkt = smältpunkt;
                 this.kokpunkt=kokpunkt;
             }
+            public static void Print(Grundämne e)
+            {
+                string typ = "okänt";
+                if (e.typ == true)
+                    typ = "metall";
+                else if (e.typ == false)
+                    typ = "ickemetall";
+
+                WriteLine($"Grundämne: {e.namn} \n  Typ: {typ} \n  Smältpunkt: {e.smältpunkt} K \n  Kokpunkt: {e.kokpunkt} K\n");
+            }
         }
         static void Main(string[] args)
         {
-            Element syre = new Element("syre", 8, false, 54.36, 90.188);
-            Element järn = new Element("järn", 26, true, 1811.0, 3134.0);
-            Element guld = new Element("guld", 79, true, 1137.33, 3243.0);
+            Grundämne syre = new Grundämne("syre", 8, false, 54.36, 90.188);
+            Grundämne järn = new Grundämne("järn", 26, true, 1811.0, 3134.0);
+            Grundämne guld = new Grundämne("guld", 79, true, 1337.33, 3243.0);
+
+            Grundämne.Print(syre);
+            Grundämne.Print(järn);
+            Grundämne.Print(guld);
         }
     }
 }
