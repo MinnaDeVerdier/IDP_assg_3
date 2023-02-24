@@ -50,6 +50,10 @@ namespace IDP_assg_3
                 if (g.typ == true) 
                     WriteLine(g.namn);
 
+            WriteLine("\nListade grundämnen som har en smältpunkt under, men en kokpunkt över, 0 grader Celcius: ");
+            foreach (Grundämne g in grundämnen)
+                if (g.smältpunkt < 273.16 && g.kokpunkt > 273.16)
+                    WriteLine(g.namn);
         }
     }
 }
