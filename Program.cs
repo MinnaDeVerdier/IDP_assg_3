@@ -1,4 +1,5 @@
 ﻿using System.Xml;
+using static System.Console;
 
 namespace IDP_assg_3
 {
@@ -20,7 +21,9 @@ namespace IDP_assg_3
         }
         static void Main(string[] args)
         {
-
+            Element syre = new Element("syre", 8, false, 54.36, 90.188);
+            Element järn = new Element("järn", 26, true, 1811.0, 3134.0);
+            Element guld = new Element("guld", 79, true, 1137.33, 3243.0);
         }
     }
 }
